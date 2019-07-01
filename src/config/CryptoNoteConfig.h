@@ -17,7 +17,7 @@
 namespace CryptoNote {
 namespace parameters {
 
-const uint64_t DIFFICULTY_TARGET                             = 30; // seconds
+const uint64_t DIFFICULTY_TARGET                             = 24; // seconds
 
 const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
@@ -41,18 +41,18 @@ const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX                 = 620000;
 const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 700000;
 const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 800000;
 
-const unsigned EMISSION_SPEED_FACTOR                         = 22;
+const unsigned EMISSION_SPEED_FACTOR                         = 24;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
 
-const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(100000);
+const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(0);
 
 const char     GENESIS_COINBASE_TX_HEX[]                     = "012801ff0001a08d0602843dd448925a2dc4aea6e0910712b3017a601e16525f6f67255530ac3d66629521019ad60747e7550ccf92826067893fe32664c9b91b8aef3ab5398ee1f5c96c59ea";
 static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
 
 const uint64_t GENESIS_BLOCK_TIMESTAMP                       = 1512800692;
 
-const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
+const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 20;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 100000; 
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2  = 20000;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1  = 10000;
@@ -245,6 +245,6 @@ const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 };
 
 const char* const SEED_NODES[] = {
-  "104.163.207.216:20032" //siz
+  "127.0.0.1:20032" //siz
 };
 } // CryptoNote
