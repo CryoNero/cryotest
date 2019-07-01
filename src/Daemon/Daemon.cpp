@@ -2,11 +2,10 @@
 // Copyright (c) 2018, The Karai Developers
 // Copyright (c) 2018-2019, The TurtleCoin Developers
 // Copyright (c) 2019, The CyprusCoin Developers
+// Copyright (c) 2019, The CryoNero Developers
 //
 // Please see the included LICENSE file for more information.
-
 #include <config/CliHeader.h>
-
 #include "DaemonConfiguration.h"
 #include "DaemonCommandsHandler.h"
 #include "Common/ScopeExit.h"
@@ -32,24 +31,19 @@
 #include "Rpc/RpcServer.h"
 #include "Serialization/BinaryInputStreamSerializer.h"
 #include "Serialization/BinaryOutputStreamSerializer.h"
-
 #include <config/CryptoNoteCheckpoints.h>
 #include <Logging/LoggerManager.h>
-
 #include <Common/FileSystemShim.h>
-
 #if defined(WIN32)
 #include <crtdbg.h>
 #include <io.h>
 #else
 #include <unistd.h>
 #endif
-
 using Common::JsonValue;
 using namespace CryptoNote;
 using namespace Logging;
 using namespace DaemonConfig;
-
 void print_genesis_tx_hex(const std::vector<std::string> rewardAddresses, const bool blockExplorerMode, std::shared_ptr<LoggerManager> logManager)
 {
   std::vector<CryptoNote::AccountPublicAddress> rewardTargets;

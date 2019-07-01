@@ -1,17 +1,15 @@
 // Copyright (c) 2012-2017, The CryptoNote developers, The Bytecoin developers
 // Copyright (c) 2018, The TurtleCoin Developers
+// Copyright (c) 2019, The CryoNero Developers
 //
 // Please see the included LICENSE file for more information.
-
 #include "JsonRpcServer.h"
-
 #include <fstream>
 #include <future>
 #include <system_error>
 #include <memory>
 #include <sstream>
 #include "HTTP/HttpParserErrorCodes.h"
-
 #include <System/TcpConnection.h>
 #include <System/TcpListener.h>
 #include <System/TcpStream.h>
@@ -19,7 +17,6 @@
 #include "HTTP/HttpParser.h"
 #include "HTTP/HttpResponse.h"
 #include "Rpc/JsonRpc.h"
-
 #include "Common/JsonValue.h"
 #include "Serialization/JsonInputValueSerializer.h"
 #include "Serialization/JsonOutputStreamSerializer.h"

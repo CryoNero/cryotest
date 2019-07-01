@@ -1,9 +1,9 @@
 // Copyright (c) 2012-2017, The CryptoNote developers, The Bytecoin developers
 // Copyright (c) 2014-2018, The Monero Project
 // Copyright (c) 2018, The TurtleCoin Developers
+// Copyright (c) 2019, The CryoNero Developers
 //
 // Please see the included LICENSE file for more information.
-
 #include "Currency.h"
 #include <cctype>
 #include <boost/algorithm/string/trim.hpp>
@@ -11,7 +11,6 @@
 #include "../Common/Base58.h"
 #include "../Common/int-util.h"
 #include "../Common/StringTools.h"
-
 #include "Account.h"
 #include "CheckDifficulty.h"
 #include "CryptoNoteBasicImpl.h"
@@ -20,16 +19,11 @@
 #include "Difficulty.h"
 #include "Common/TransactionExtra.h"
 #include "UpgradeDetector.h"
-
 #include <config/Constants.h>
-
 #include <Utilities/Addresses.h>
-
 #undef ERROR
-
 using namespace Logging;
 using namespace Common;
-
 namespace CryptoNote {
 
 bool Currency::init() {

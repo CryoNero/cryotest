@@ -1,31 +1,21 @@
 // Copyright (c) 2012-2017, The CryptoNote developers, The Bytecoin developers
 // Copyright (c) 2018, The TurtleCoin Developers
+// Copyright (c) 2019, The CryoNero Developers
 // 
 // Please see the included LICENSE file for more information.
-
 #include <boost/format.hpp>
-
 #include <ctime>
-
 #include <CryptoNoteCore/Core.h>
 #include <CryptoNoteCore/CryptoNoteFormatUtils.h>
 #include <CryptoNoteCore/Currency.h>
-
 #include <CryptoNoteProtocol/CryptoNoteProtocolHandler.h>
-
 #include <Daemon/DaemonCommandsHandler.h>
-
 #include <P2p/NetNode.h>
-
 #include <Rpc/JsonRpc.h>
-
 #include <Serialization/SerializationTools.h>
-
 #include <Utilities/FormatTools.h>
 #include <Utilities/ColouredMsg.h>
-
 #include "version.h"
-
 namespace {
 template <typename T>
 static bool print_as_json(const T& obj) {
@@ -85,6 +75,7 @@ std::string DaemonCommandsHandler::get_commands_str()
 bool DaemonCommandsHandler::exit(const std::vector<std::string>& args) {
   std::cout << InformationMsg("================= EXITING ==================\n"
                               "== PLEASE WAIT, THIS MAY TAKE A LONG TIME ==\n"
+							  "==============CRYONERO PROJECT==============\n"
                               "============================================\n");
 
   /* Set log to max when exiting. Sometimes this takes a while, and it helps
