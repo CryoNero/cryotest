@@ -47,7 +47,7 @@ static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED
 
 const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(0);
 
-const char     GENESIS_COINBASE_TX_HEX[]                     = "012801ff0001a08d0602843dd448925a2dc4aea6e0910712b3017a601e16525f6f67255530ac3d66629521019ad60747e7550ccf92826067893fe32664c9b91b8aef3ab5398ee1f5c96c59ea";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "a80198dc8df5feff1f00002101adb2e60c8cb43a43d2b45e79d4cb7b76b08a83c7e2ce025a6e1a8da75dd30ef1";
 static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
 
 const uint64_t GENESIS_BLOCK_TIMESTAMP                       = 1512800692;
