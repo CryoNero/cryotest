@@ -57,7 +57,7 @@ void MiningConfig::parse(int argc, char** argv)
         ("scan-time", "Blockchain polling interval (seconds). How often miner will check the Blockchain for updates", cxxopts::value<size_t>(scanPeriod)->default_value("1"), "#");
 
     options.add_options("Mining")
-        ("address", "The valid CryptoNote miner's address", cxxopts::value<std::string>(miningAddress), "<address>")
+        ("address", "The valid CryoNero miner's address", cxxopts::value<std::string>(miningAddress), "<address>")
         ("block-timestamp-interval", "Timestamp incremental step for each subsequent block. May be set only if --first-block-timestamp has been set.",
           cxxopts::value<int64_t>(blockTimestampInterval) ->default_value("0"), "#")
         ("first-block-timestamp", "Set timestamp to the first mined block. 0 means leave timestamp unchanged", cxxopts::value<uint64_t>(firstBlockTimestamp)->default_value("0"), "#")

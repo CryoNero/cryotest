@@ -71,7 +71,7 @@ void Miner::runWorkers(BlockMiningParameters blockMiningParameters, size_t threa
 {
     std::cout << InformationMsg("Started mining for difficulty of ")
               << InformationMsg(blockMiningParameters.difficulty)
-              << InformationMsg(". Good luck! ;)\n");
+              << InformationMsg(". Good luck and have great time to mine some CryoNero! ;)\n");
 
     try
     {
